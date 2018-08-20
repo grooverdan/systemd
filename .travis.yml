@@ -12,6 +12,9 @@ language: c
 jobs:
     include:
         - stage: coverity scan
+          os:
+              - linux-ppc64le
+              - linux
           before_script:
               - sudo apt-get update
               - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
